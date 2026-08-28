@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baikiemtra</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: #fffaf3;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+        }
+        .container {
+            width: 92%;
+            max-width: 1250px;
+            margin: auto;
+        }
+        header {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        .header-main {
+            min-height: 85px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 190px;
+        }
+        .logo-icon {
+            width: 52px;
+            height: 52px;
+            background: #f39010;
+            border-radius: 50% 50% 45% 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(223, 131, 10);
+            font-size: 27px;
+        }
+        .logo-text h1 {
+            font-size: 27px;
+            color: #f18256;
+        }
+        .logo-text p {
+            font-size: 18px;
+            color: #c46106;
+        }
+        .search {
+            flex: 1;
+            max-width: 500px;
+            display: flex;
+            border: 2px solid #ff7a00;
+            border-radius: 30px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .search input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 14px 20px;
+            font-size: 14px;
+        }
+
+        .search button {
+            width: 60px;
+            background: #ff7a00;
+            color: white;
+            font-size: 20px;
+        }
+        nav {
+            background: #222;
+            color: white;
+        }
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        .nav-list li a {
+            display: block;
+            padding: 16px 22px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .nav-list li a:hover,
+        .nav-list li.active a {
+            color: #f0530a;
+            background: #333;
+        }
+        main {
+            height:250px;
+            text-align: center;
+            padding-top: 100px;
+        } 
+        h2{
+            color: rgb(236, 131, 12);
+        }
+        h4{
+            color: rgb(253, 173, 0)
+        }
+        main p{
+            font-weight: bold;
+            color: #f18256;
+        }
+        footer {
+            margin-top: 50px;
+            background: #252525;
+            color: white;
+        }
+        .footer-main {
+            padding: 45px 0;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1.3fr 1.4fr;
+            gap: 35px;
+        }
+        .doanvan h3 {
+            color: #ff8500;
+            margin-bottom: 18px;
+            font-size: 17px;
+        }
+        .doanvan p,
+        .doanvan a {
+            color: #ccc;
+            font-size: 14px;
+            line-height: 2;
+            display: block;
+        }
+        .doanvan a:hover {
+            color: #ff8500;
+        }
+        .kitu {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .kitu a {
+            width: 38px;
+            height: 38px;
+            background: #444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+        }
+        .nhapemail {
+            display: flex;
+            margin-top: 10px;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+        .nhapemail input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            outline: none;
+        }
+        .nhapemail button {
+            padding: 0 18px;
+            background: #ff7200;
+            color: white;
+            font-weight: bold;
+        }
+        .cuoi {
+            border-top: 1px solid #444;
+            padding: 18px;
+            text-align: center;
+            color: #aaa;
+            font-size: 13px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-main">
+            <a href="#" class="logo">
+                <div class="logo-icon">🐾</div>
+                <div class="logo-text">
+                    <h1>PetLove</h1>
+                    <p>Yêu thương thú cưng</p>
+                </div>
+            </a>
+            <div class="search">
+                <input
+                    type="text"
+                    placeholder="Tìm kiếm pet, thức ăn, phụ kiện..."
+                >
+                <button>🔍</button>
+            </div>
+            <div class="header-actions">
+                <div class="action">
+                    <span class="action-icon">👤</span> <a href="webcon/dangnhap.html"> Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul class="nav-list">
+            <li class="active">
+                 <a href="#">TRANG CHỦ</a>
+            </li>
+            <li>
+                <a href="webcon/cho.html" target="_blank">CHÓ</a>
+            </li>
+            <li>
+                <a href="webcon/meo.html" target="_blank">MÈO</a>
+            </li>
+            <li>
+                <a href="webcon/phukien.html" target="_blank">PHỤ KIỆN</a>
+            </li>
+            <li>
+                <a href="webcon/thucan.html" target="_blank">THỨC ĂN</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+            <h2>PetLove</h2>
+            <h4>Thiên đường dành cho những con Sen. Nơi<p> tất cả những gì Sen cần, chỉ một cú click.</p></h4>
+    </main>
+    <footer>
+        <div class="container footer-main">
+            <div class="doanvan">
+                <h3>PETLOVE</h3>
+                <p>
+                    PetLove - Cửa hàng thú cưng uy tín,
+                    cung cấp sản phẩm chất lượng và dịch vụ
+                    chăm sóc thú cưng tốt nhất.
+                </p>
+                <div class="kitu">
+                    <a href="#">f</a>
+                    <a href="#">◎</a>
+                    <a href="#">♪</a>
+                    <a href="#">▶</a>
+                </div>
+            </div>
+            <div class="doanvan">
+                <h3>VỀ CHÚNG TÔI</h3>
+                <a href="#">Giới thiệu</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản sử dụng</a>
+                <a href="#">Chính sách đổi trả</a>
+                <a href="#">Liên hệ</a>
+            </div>
+            <div class="doanvan">
+
+                <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+                <a href="#">Hướng dẫn mua hàng</a>
+                <a href="#">Phương thức thanh toán</a>
+                <a href="#">Chính sách giao hàng</a>
+                <a href="#">Câu hỏi thường gặp</a>
+                <a href="#">Bảo hành - Đổi trả</a>
+            </div>
+            <div class="doanvan">
+                <h3>THÔNG TIN LIÊN HỆ</h3>
+                <p>📞 0123 456 789</p>
+                <p>✉ support@petlove.vn</p>
+                <p>📍 30/4 Cách Mạng Tháng 8</p>
+            </div>
+            <div class="doanvan">
+                <h3>ĐĂNG KÝ NHẬN TIN</h3>
+                <p>
+                    Nhận ưu đãi và thông tin mới nhất
+                    từ PetLove.
+                </p>
+                <div class="nhapemail">
+                    <input
+                        type="email"
+                        placeholder="Nhập email của bạn..."
+                    >
+                    <button>
+                        ĐĂNG KÝ
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="cuoi">
+            © 2026 PetLove.Bản quyền thuộc Trọng Phúc
+        </div>
+    </footer>
+</body>
+</html>
